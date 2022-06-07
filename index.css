@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Font';
+    src: url('/Font/cs_regular.ttf');
+}
+
+*{
+    font-family: 'Font';
+    background-color: bisque;
+}
+
+body {
+    font-family: 'Font';
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 30%;
+}
+.list-navegation {
+    width: 70%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    padding-bottom: 60px;
+    padding-top: 20px;
+}
+
+header img{
+    width: 200px;
+    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    padding: 0%;
+}
+
+.container-header{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header img{
+    width: 30%;
+}
+
+.container-lacoste{
+    width: 50%;;
+    padding-bottom: 60%;
+}
+
+.container-lacoste img{
+    width: 30%;
+}
+
+.container-lacoste p{
+    font-size: 3em;
+    width: 30%;
+    font-family: 'Font';
+}
+
+.container-lacoste button{
+    width: 40%;
+    height: 50px;
+    color: white;
+    background-color: #EA1821;
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Font';
+}
