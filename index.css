@@ -1,30 +1,54 @@
 @font-face {
-    font-family: 'Font';
-    src: url('/Font/cs_regular.ttf');
+    font-family: 'mplus-2p-black';
+    src: url('/Font/mplus-2p-black.ttf');
+}
+
+:root{
+    --padding-x: 100px;
 }
 
 *{
-    font-family: 'Font';
-    background-color: bisque;
+    font-family: 'mplus-2p-black';
 }
 
 body {
-    font-family: 'Font';
-    margin: 0;
-    padding: 0;
+    font-family: 'mplus-2p-black';
+    font-size: 15px;
+    font-stretch: condensed;
+    margin: 10px;
 }
 
-nav {
-    width: 30%;
-}
 .list-navegation {
-    width: 70%;
-    list-style: none;
+    height: 50%;
+}
+
+.list-navegation ul{
+    width: 95%;
+    height: 10px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 0px;
-    margin: 0;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 15px;
+    
+}
+
+.list-navegation ul li {
+    margin: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: 0.5s;
+}
+
+.list-navegation ul li:hover{
+    border-bottom: 1px solid var(--white);
+}
+
+.list-navegation ul li a{
+    text-decoration: none;
+    color: #004526;
 }
 
 a {
@@ -33,61 +57,162 @@ a {
     text-transform: uppercase;
 }
 
-header {
+.navbar {
+    height: 80px;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px 20px;
     align-items: center;
-    flex-wrap: wrap;
-    background-color: aliceblue;
-    padding-bottom: 60px;
-    padding-top: 20px;
 }
 
-header img{
-    width: 200px;
-    align-items: flex-start;
-    display: flex;
-    align-items: center;
-    padding: 0%;
-}
-
-.container-header{
-    width: 100%;
-    margin-top: 100px;
+.navbar .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-header img{
-    width: 30%;
+.nav .logo img {
+    width: 100px;
+    max-width: 150px;
+    min-width: 50px;
+    max-height: 40px;
 }
 
-.container-lacoste{
-    width: 50%;;
-    padding-bottom: 60%;
+.hero_section { 
+    height: calc(100vh - 80px);
+    background-color: beige;
+    background-image: url(https://mmontemor.com/wp-content/uploads/2018/12/01-66.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container-lacoste img{
-    width: 30%;
+.hero_section::before{
+    content: "";
+    position: absolute;
+    top: 111px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    opacity: 31%;
+    mix-blend-mode: exclusion;
 }
 
-.container-lacoste p{
-    font-size: 3em;
-    width: 30%;
-    font-family: 'Font';
+.hero_section * {
+    z-index: 1;
+    position: relative;
+    mix-blend-mode: multiply;
 }
 
-.container-lacoste button{
-    width: 40%;
-    height: 50px;
-    color: white;
-    background-color: #EA1821;
-    border: 0;
-    outline: 0;
-    border-radius: 15px;
-    font-size: 1.2em;
+.hero_section-text h1{
+    font-size: 50px;
     text-transform: uppercase;
-    font-family: 'Font';
+    text-align: center;
+    font-weight: 400;
+    color: black;
+}
+
+.hero_section-more{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_section-more p{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+}
+
+/**/
+
+
+.about_section{
+    padding: 100px 100px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section_title{
+    font-size: 35px;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about_section p{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    align-items: center;
+    line-height: 1.5;
+}
+
+
+
+.beneficios_section {
+    padding: 100px var(--padding-x);
+    background-image: url(".img/djokovic_lacoste.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0%;
+}
+
+.beneficios_section *{
+    position: relative;
+    z-index: 1;
+}
+
+.beneficios_cardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,275px));
+    gap: 10%;
+    justify-content: center;
+    margin: 80px;
+
+}
+
+.beneficios_card-grid{
+    width: 100%;
+    background-color: beige;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: auto;
+    padding: 35px;
+    gap: 10px;
+}
+
+.beneficios_card-img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.beneficios_card-img img{
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    max-height: 350px;
+    background-color: beige;
+}
+
+.beneficios_card-text h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    color:black
 }
